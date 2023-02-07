@@ -37,20 +37,22 @@ Click this [link](https://github.com/abrodyyy/Cryptocurrencies/blob/a992061b03a2
 
 ### Part 1: Preprocessing the Data for PCA
 
+![crypto_df](Images/crypto_df.png)
+
 - The following five preprocessing steps have been performed on the crypto_df DataFrame:
   - All cryptocurrencies that are not being traded are removed
   - The IsTrading column is dropped
-  [Code Snip](Images/The%20IsTrading%20column%20is%20dropped.svg)
   - All the rows that have at least one null value are removed
   - All the rows that do not have coins being mined are removed
   - The CoinName column is dropped
+
+![crypto_names_df](Images/crypto_names_df.png)
+
 - A new DataFrame is created that stores all cryptocurrency names from the CoinName column and retains the index from the crypto_df DataFrame
 - The get_dummies() method is used to create variables for the text features, which are then stored in a new DataFrame, X
 - The features from the X DataFrame have been standardized using the StandardScaler fit_transform() function
 
 ### Part 2: Reducing Data Dimensions Using PCA
-
-Click this [link](https://github.com/abrodyyy/Cryptocurrencies/blob/a992061b03a288a387280cf996bcfd55d3d3dda0/crypto_clustering.ipynb) for the full code for deliverable 2.
 
 - The PCA algorithm reduces the dimensions of the X DataFrame down to three principal components
 - The pcs_df DataFrame is created and has the following three columns, PC 1, PC 2, and PC 3, and has the index from the crypto_df DataFrame
