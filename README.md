@@ -42,15 +42,16 @@ Click this [link](https://github.com/abrodyyy/Cryptocurrencies/blob/a992061b03a2
   - The IsTrading column is dropped
   - All the rows that have at least one null value are removed
   - All the rows that do not have coins being mined are removed
-  - ![crypto_df](Images/crypto_df.png) The CoinName column is dropped
+  - The CoinName column is dropped --> ![crypto_df](Images/crypto_df.png)
 
-- ![crypto_names_df](Images/crypto_names_df.png) A new DataFrame is created that stores all cryptocurrency names from the CoinName column and retains the index from the crypto_df DataFrame
-- The get_dummies() method is used to create variables for the text features, which are then stored in a new DataFrame, X
-- The features from the X DataFrame have been standardized using the StandardScaler fit_transform() function
+- A new DataFrame is created that stores all cryptocurrency names from the CoinName column and retains the index from the crypto_df DataFrame --> ![crypto_names_df](Images/crypto_names_df.png)
+- The get_dummies() method is used to create variables for the text features, which are then stored in a new DataFrame, X --> ![X pt 1](Images/X%20pt%201.png)![X pt 2](Images/X%20pt%202.png)
+- The features from the X DataFrame have been standardized using the StandardScaler fit_transform() function --> ![X_scaled](Images/X_scaled.png)
+![Alt text](Images/test.svg)
 
 ### Part 2: Reducing Data Dimensions Using PCA
 
-- The PCA algorithm reduces the dimensions of the X DataFrame down to three principal components
+- The PCA algorithm reduces the dimensions of the X DataFrame down to three principal components --> ![x_pca](Images/x_pca.png)
 - The pcs_df DataFrame is created and has the following three columns, PC 1, PC 2, and PC 3, and has the index from the crypto_df DataFrame
 
 ### Part 3: Clustering Cryptocurrencies Using K-means
