@@ -37,18 +37,14 @@ Click this [link](https://github.com/abrodyyy/Cryptocurrencies/blob/a992061b03a2
 
 ### Part 1: Preprocessing the Data for PCA
 
-![crypto_df](Images/crypto_df.png)
-
 - The following five preprocessing steps have been performed on the crypto_df DataFrame:
   - All cryptocurrencies that are not being traded are removed
   - The IsTrading column is dropped
   - All the rows that have at least one null value are removed
   - All the rows that do not have coins being mined are removed
-  - The CoinName column is dropped
+  - ![crypto_df](Images/crypto_df.png) The CoinName column is dropped
 
-![crypto_names_df](Images/crypto_names_df.png)
-
-- A new DataFrame is created that stores all cryptocurrency names from the CoinName column and retains the index from the crypto_df DataFrame
+- ![crypto_names_df](Images/crypto_names_df.png) A new DataFrame is created that stores all cryptocurrency names from the CoinName column and retains the index from the crypto_df DataFrame
 - The get_dummies() method is used to create variables for the text features, which are then stored in a new DataFrame, X
 - The features from the X DataFrame have been standardized using the StandardScaler fit_transform() function
 
